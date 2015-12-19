@@ -1,0 +1,16 @@
+<div class="file" id="XXX">
+    <h3><a name="{{ .Title | urlize }}" href="#{{ .Title | urlize }}" style="text-decoration:none;">
+        {{ .Title }}</a>
+        {{ with .Params.year }}({{.}}){{ end }}
+    </h3>
+    {{ with .Params.subtitle }}<h4>{{ . }}</h4>{{ end }}
+    {{ with .Description }}<p>{{ . }}</p>{{ end }}
+    {{ with .Params.files }}
+        <ul>
+            {{ range $key, $value := . }}
+            <li><a href="/{{ $value }}">{{ $key }}</a> </li>
+            {{ end }}
+        </ul>
+    {{ end }}
+    {{ with .Params.quote }}<blockquote>{{ . }}</blockquote>{{ end }}
+</div>

@@ -1,0 +1,25 @@
+{{ partial "head.html" .}}
+    <body>
+        <div class="container">
+        {{ partial "intro.html" . }}
+            <div class="six columns offset-by-one"><h2>Joseph Hopper</h2>
+                {{ range where .Data.Pages "Section" "Joseph Hopper" }}
+                    {{ partial "item-list.html" . }}
+                {{ end }}
+            </div>
+            <div class="six columns offset-by-one"><h2>Joseph Barron Hopper</h2>
+                {{ range where .Data.Pages "Section" "Joe B Hopper" }}
+                    {{ partial "item-list.html" . }}
+                {{ end }}
+            </div>
+            <div class="twelve column">
+                <hr />
+                <p style="text-align:center;">
+                    Copyright &copy;
+                    <script language="javascript" type="text/javascript">document.write((new Date()).getFullYear())</script>
+                    <a href="http://olneyhymn.github.io">Olney Hymn</a>.
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
