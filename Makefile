@@ -22,3 +22,7 @@ push:
 archive:
 	# Archive data files (not on github)
 	zip -r -9 ~/Dropbox/jhopper-archives/joseph-hopper-data-`date +%Y%m%d`.zip static/data/
+
+check_links:
+	# Find broken links
+	wget --spider -o ~/wget.log -e robots=off -w 1 -r -p http://joseph-hopper.com
