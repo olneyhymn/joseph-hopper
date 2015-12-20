@@ -1,5 +1,5 @@
 +++
-author = "Joseph B. Hopper"
+author = "Joe B. Hopper"
 description = """Sermon manuscripts organized by book of the bible."""
 title = "Sermons by Book of the Bible"
 
